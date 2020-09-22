@@ -1,0 +1,25 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span class="color-text"><strong>APRSP</strong></span>
+     
+     
+      
+      <div [ngClass]="(authText)?'menu':'auth'"      >
+        <button mat-button  [routerLink]="['company']"color="grey"  *ngIf="!authText">
+          <strong> COMPANY </strong>
+        </button>
+        <button mat-button (click)="auth()" color="grey">
+          <strong>{{ authText ? "LOGIN" : "LOGOUT" }}</strong>
+        </button>
+      </div>
+    </mat-toolbar>
+    <div class="container">
+      <div class="back">
+        <span class="material-icons" (click)="goBack()">arrow_back</span>
+      </div>
+   <router-outlet></router-outlet>
+</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

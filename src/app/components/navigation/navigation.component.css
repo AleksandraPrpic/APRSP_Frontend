@@ -1,0 +1,68 @@
+.sidenav-container {
+  height: 100%;
+  position: relative;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.color-text {
+  color: black;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #a8a8a8;
+}
+
+
+.mat-drawer {
+  background-color: #a8a8a8;
+}
+
+.material-icons{
+  color:  #A8A8A8;
+ 
+}
+
+.icon {
+  color: black;
+}
+.back{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+
+.auth{
+  color: black;
+  position: absolute;
+  left: 80%;
+}
+
+.menu{
+  color: black;
+  position: absolute;
+  left: 90%;
+
+}
+
+.container {
+  background-image: url(../../../assets/img/moon.jpeg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  overflow: scroll;
+  position: relative;
+}
+
+.mat-drawer-content {
+  overflow: hidden;
+}

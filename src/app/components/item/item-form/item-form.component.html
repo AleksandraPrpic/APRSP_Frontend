@@ -1,0 +1,43 @@
+<div class="example-container">
+  <form [formGroup]="itemForm" (ngSubmit)="createOrEditItem()">
+    <h1 color="grey">{{ formText }}</h1>
+    <mat-form-field appearance="outline" class="input-field">
+      <mat-label>Name</mat-label>
+      <input matInput id="name" name="name" formControlName="name" />
+      <span *ngIf="!itemForm.get('name').valid && itemForm.get('name').touched"
+        >Name must contains between 3 and 40 charachters!</span
+      >
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="outline" class="input-field">
+      <mat-label>Price</mat-label>
+      <input matInput name="price" formControlName="price" />
+      <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span>
+      <span
+        *ngIf="!itemForm.get('price').valid && itemForm.get('price').touched"
+        >Please enter a valid price!</span
+      >
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="outline" class="input-field">
+      <mat-label>Measure</mat-label>
+      <input matInput name="measure" formControlName="measure" type="number" min="1" />
+      <span
+        *ngIf="
+          !itemForm.get('measure').valid && itemForm.get('measure').touched
+        "
+        >Please enter a valid measure!</span
+      >
+    </mat-form-field>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="button-pos">
+      <button class="btn submit-button" [disabled]="!itemForm.valid">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
